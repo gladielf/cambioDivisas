@@ -1,0 +1,4 @@
+var constants={
+	"EUROS_TO_PTAS":166.3860,
+	"PTAS_TO_EUROS":0.00601012
+}
