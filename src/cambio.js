@@ -1,7 +1,8 @@
-function euroToPtas(numEuros){
-	return multiplicacion(numEuros,constants.EUROS_TO_PTAS);
-}
-
-function ptasToEuro(numPtas){
-	return multiplicacion(numPtas,constants.PTAS_TO_EUROS);
-}
+function cambioDivisas(obj){
+	this.num=obj.num;
+	this.constant= obj.constant;
+	this.cambio= obj.cambio;
+	this.cambioDiv = function(){
+		return this.cambio.multiplicacion();
+	};
+};
