@@ -1,0 +1,35 @@
+{
+  "name": "cambio-de-divisas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jasmine-core": "^2.3.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "istanbul": "^0.3.21",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "karma": "^0.13.10",
+    "karma-coverage": "^0.5.2",
+    "karma-jasmine": "^0.3.6"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gladielf/cambioDivisas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gladielf/cambioDivisas/issues"
+  },
+  "homepage": "https://github.com/gladielf/cambioDivisas#readme"
+}
