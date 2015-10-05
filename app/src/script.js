@@ -1,4 +1,4 @@
-/*var flagDot=0;
+var flagDot=0;
 var flagOper=0;
 var sig;
 
@@ -148,4 +148,4 @@ function calcRes() {
 			break;
 	}
 
-}*/
+}
