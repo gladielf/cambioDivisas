@@ -126,3 +126,11 @@ describe("Cambio-de-divisa.testSpec", function(){
 		expect(change.cambioDiv()).toBe('621.98');
 	});
 });
+
+describe("calculator.testSpec", function() {
+	
+	it ("clearScreen Button", function(){
+		
+		
+	});
+});

@@ -1,5 +1,5 @@
 TN:
-SF:/home/ferminconejo/workspace/cambio/src/cambio.js
+SF:/home/ferminconejo/workspace/cambio/app/src/cambio.js
 FN:1,cambioDivisas
 FN:6,(anonymous_2)
 FNF:2
@@ -16,7 +16,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/ferminconejo/workspace/cambio/src/constants.js
+SF:/home/ferminconejo/workspace/cambio/app/src/constants.js
 FNF:0
 FNH:0
 DA:1,1
@@ -26,7 +26,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/ferminconejo/workspace/cambio/src/operaciones.js
+SF:/home/ferminconejo/workspace/cambio/app/src/operaciones.js
 FN:1,operaciones
 FN:3,(anonymous_2)
 FN:7,(anonymous_3)
@@ -50,6 +50,15 @@ DA:15,14
 DA:16,2
 LF:9
 LH:9
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/ferminconejo/workspace/cambio/app/src/script.js
+FNF:0
+FNH:0
+LF:0
+LH:0
 BRF:0
 BRH:0
 end_of_record

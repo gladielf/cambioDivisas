@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="14"  lines-covered="14"  line-rate="1"  branches-valid="0"  branches-covered="0"  branch-rate="1"  timestamp="1444027393074" complexity="0" version="0.1">
+<coverage lines-valid="14"  lines-covered="14"  line-rate="1"  branches-valid="0"  branches-covered="0"  branch-rate="1"  timestamp="1444035386894" complexity="0" version="0.1">
 <sources>
 	<source>/home/ferminconejo/workspace/cambio</source>
 </sources>
 <packages>
 	<package name="src"  line-rate="1"  branch-rate="1" >
 	<classes>
-		<class name="cambio.js"  filename="src/cambio.js"  line-rate="1"  branch-rate="1" >
+		<class name="cambio.js"  filename="app/src/cambio.js"  line-rate="1"  branch-rate="1" >
 		<methods>
 			<method name="cambioDivisas"  hits="7"  signature="()V" >
 				<lines><line number="1"  hits="7" /></lines>
@@ -23,14 +23,14 @@
 			<line number="7"  hits="6"  branch="false" />
 		</lines>
 		</class>
-		<class name="constants.js"  filename="src/constants.js"  line-rate="1"  branch-rate="1" >
+		<class name="constants.js"  filename="app/src/constants.js"  line-rate="1"  branch-rate="1" >
 		<methods>
 		</methods>
 		<lines>
 			<line number="1"  hits="1"  branch="false" />
 		</lines>
 		</class>
-		<class name="operaciones.js"  filename="src/operaciones.js"  line-rate="1"  branch-rate="1" >
+		<class name="operaciones.js"  filename="app/src/operaciones.js"  line-rate="1"  branch-rate="1" >
 		<methods>
 			<method name="operaciones"  hits="14"  signature="()V" >
 				<lines><line number="1"  hits="14" /></lines>
@@ -58,6 +58,12 @@
 			<line number="12"  hits="8"  branch="false" />
 			<line number="15"  hits="14"  branch="false" />
 			<line number="16"  hits="2"  branch="false" />
+		</lines>
+		</class>
+		<class name="script.js"  filename="app/src/script.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
 		</lines>
 		</class>
 	</classes>

@@ -1,0 +1,55 @@
+body{
+
+}
+
+div#container{
+
+}
+
+div#header{
+
+}
+
+div#sidebar{
+
+}
+
+div#menu{
+
+}
+
+div#content{
+
+}
+
+div#footer{
+	
+}
+input.bigButton{
+	height: 25px;
+	width: 70px;
+	margin: .5%;
+	border-radius: 5px;
+}
+input.smallButton{
+	height: 30px;
+	width: 30px;
+	margin: .5%;
+	border-radius: 5px;
+}
+input#screen{
+	margin: .5%;
+	width: 150px;
+	text-align: right;
+	background-color: lightgreen;
+}
+fieldset{
+	border: outset;
+	border-top-color: white; 
+	border-left-color: white;
+	border-right-color: black;
+	border-bottom-color: black;
+	margin-right:90%;  
+	padding: .5%;
+	background-color: lightgray;
+}
