@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="14"  lines-covered="14"  line-rate="1"  branches-valid="0"  branches-covered="0"  branch-rate="1"  timestamp="1444035386894" complexity="0" version="0.1">
+<coverage lines-valid="14"  lines-covered="14"  line-rate="1"  branches-valid="0"  branches-covered="0"  branch-rate="1"  timestamp="1444057848381" complexity="0" version="0.1">
 <sources>
 	<source>/home/ferminconejo/workspace/cambio</source>
 </sources>
@@ -13,14 +13,14 @@
 				<lines><line number="1"  hits="7" /></lines>
 			</method>
 			<method name="(anonymous_2)"  hits="6"  signature="()V" >
-				<lines><line number="6"  hits="6" /></lines>
+				<lines><line number="3"  hits="6" /></lines>
 			</method>
 		</methods>
 		<lines>
 			<line number="1"  hits="1"  branch="false" />
-			<line number="5"  hits="7"  branch="false" />
-			<line number="6"  hits="7"  branch="false" />
-			<line number="7"  hits="6"  branch="false" />
+			<line number="2"  hits="7"  branch="false" />
+			<line number="3"  hits="7"  branch="false" />
+			<line number="4"  hits="6"  branch="false" />
 		</lines>
 		</class>
 		<class name="constants.js"  filename="app/src/constants.js"  line-rate="1"  branch-rate="1" >
@@ -36,28 +36,28 @@
 				<lines><line number="1"  hits="14" /></lines>
 			</method>
 			<method name="(anonymous_2)"  hits="2"  signature="()V" >
-				<lines><line number="3"  hits="2" /></lines>
+				<lines><line number="2"  hits="2" /></lines>
 			</method>
 			<method name="(anonymous_3)"  hits="2"  signature="()V" >
-				<lines><line number="7"  hits="2" /></lines>
+				<lines><line number="6"  hits="2" /></lines>
 			</method>
 			<method name="(anonymous_4)"  hits="8"  signature="()V" >
-				<lines><line number="11"  hits="8" /></lines>
+				<lines><line number="10"  hits="8" /></lines>
 			</method>
 			<method name="(anonymous_5)"  hits="2"  signature="()V" >
-				<lines><line number="15"  hits="2" /></lines>
+				<lines><line number="14"  hits="2" /></lines>
 			</method>
 		</methods>
 		<lines>
 			<line number="1"  hits="1"  branch="false" />
-			<line number="3"  hits="14"  branch="false" />
-			<line number="4"  hits="2"  branch="false" />
-			<line number="7"  hits="14"  branch="false" />
-			<line number="8"  hits="2"  branch="false" />
-			<line number="11"  hits="14"  branch="false" />
-			<line number="12"  hits="8"  branch="false" />
-			<line number="15"  hits="14"  branch="false" />
-			<line number="16"  hits="2"  branch="false" />
+			<line number="2"  hits="14"  branch="false" />
+			<line number="3"  hits="2"  branch="false" />
+			<line number="6"  hits="14"  branch="false" />
+			<line number="7"  hits="2"  branch="false" />
+			<line number="10"  hits="14"  branch="false" />
+			<line number="11"  hits="8"  branch="false" />
+			<line number="14"  hits="14"  branch="false" />
+			<line number="15"  hits="2"  branch="false" />
 		</lines>
 		</class>
 		<class name="script.js"  filename="app/src/script.js"  line-rate="1"  branch-rate="1" >

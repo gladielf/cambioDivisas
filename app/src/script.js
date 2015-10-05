@@ -1,4 +1,4 @@
-var flagDot=0;
+/*var flagDot=0;
 var flagOper=0;
 var sig;
 
@@ -14,7 +14,6 @@ function bckspScreen(){
     screenValue=document.getElementById("screen").value;
     for (var i = 0; i < screenValue.length-1; i++) {
         screenExit=screenExit+screenValue.charAt(i);
-        
     }
     if (screenValue.charAt(screenValue.length-1)=='.') {
         flagDot=0;
@@ -23,8 +22,6 @@ function bckspScreen(){
     if (screenValue.charAt(screenValue.length-1)=='+' || screenValue.charAt(screenValue.length-1)=='-' || screenValue.charAt(screenValue.length-1)=='*' || screenValue.charAt(screenValue.length-1)=='/' ) {
         flagOper=0;
         flagDot=checkDot(screenExit);
-        
-
     }
     document.getElementById("screen").value=screenExit;
 }
@@ -47,7 +44,6 @@ function insertNum (x) {
     }
     else if(x!=10){
         document.getElementById("screen").value=screenValue+x;
-        
     }
 }
 
@@ -147,5 +143,4 @@ function calcRes() {
             }
             break;
     }
-
-}
+}*/
