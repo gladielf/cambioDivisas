@@ -1,4 +1,4 @@
-describe("Operaciones", function(){
+describe("Operaciones.testSpec", function(){
 	it ("suma 1+1", function(){
 		var oper= new operaciones(1,1);
 		expect(oper.suma()).toBe('2.00');
@@ -36,7 +36,7 @@ describe("Operaciones", function(){
 	});
 });
 
-describe("Cambio de divisa", function(){
+describe("Cambio-de-divisa.testSpec", function(){
 
 	//EURO TO PESETAS
 	it("Spy Cambio de divisa",function(){

@@ -3,7 +3,7 @@
 
 module.exports = function(config) {
   config.set({
-
+    reporters: ['progress', 'junit'],
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -24,7 +24,13 @@ module.exports = function(config) {
     exclude: [
     ],
 
-    plugin: ['karma-jasmine', 'karma-phantomjs-launcher', 'coverage'],
+    plugin: [
+        'karma-jasmine',
+        'karma-phantomjs-launcher',
+        'coverage',
+        'ec-karma-junit-reporter23',
+        'karma-coverage'
+    ],
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
@@ -62,6 +68,21 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: false,
+
+    // the default configuration
+    junitReporter: {
+    outputDir: '',
+    suite: 'models'
+    },
+    coverageReporter: {
+        dir: '',
+        reporters: [
+        // reporters not supporting the `file` property
+        { type: 'html', subdir: 'report-html' },
+        { type: 'lcov', subdir: 'report-lcov' },
+        { type: 'cobertura', subdir: 'report-xml' }
+      ]
+    }
   })
 }
