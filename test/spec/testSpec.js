@@ -127,10 +127,10 @@ describe("Cambio-de-divisa.testSpec", function(){
 	});
 });
 
-describe("calculator.testSpec", function() {
+/*describe("calculator.testSpec", function() {
 	
 	it ("clearScreen Button", function(){
 		
 		
 	});
-});
+});*/

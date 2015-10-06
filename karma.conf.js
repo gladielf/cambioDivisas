@@ -79,9 +79,9 @@ module.exports = function(config) {
         dir: '',
         reporters: [
         // reporters not supporting the `file` property
-        { type: 'html', subdir: 'report-html' },
-        { type: 'lcov', subdir: 'report-lcov' },
-        { type: 'cobertura', subdir: 'report-xml' }
+        { type: 'html', dir: 'reports/coverage/', subdir: 'report-html' },
+        { type: 'lcovonly', dir: 'reports/coverage/', subdir: 'report-lcov' },
+        { type: 'cobertura', dir: 'reports/coverage/', subdir: 'report-xml' }
       ]
     }
   })
