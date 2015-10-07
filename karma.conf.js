@@ -3,25 +3,30 @@
 
 module.exports = function(config) {
   config.set({
-    reporters: ['progress', 'junit'],
+    //reporters: ['verbose', 'junit'],
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'requirejs'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'app/src/*.js',
-      'test/spec/*Spec.js'
+      {pattern: 'app/lib/**/*.js', included: false},
+      {pattern: 'app/src/*.js', included: false},
+      {pattern: 'test/**/*Spec.js', included: false},
+      //'app/src/*.js',
+      //'test/spec/*Spec.js',
+      'test/test-main.js'
     ],
 
 
     // list of files to exclude
     exclude: [
+        "app/src/main.js"
     ],
 
     plugin: [
@@ -41,9 +46,14 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'coverage'],
+    reporters: ['verbose', 'coverage', 'junit', 'notify'],
 
     
+    notifyReporter: {
+      //reportEachFailure: true, // Default: false, Will notify on every failed sepc 
+      //reportSuccess: true, // Default: true, Will notify when a suite was successful 
+    },
+
     // web server port
     port: 9876,
 
@@ -72,11 +82,11 @@ module.exports = function(config) {
 
     // the default configuration
     junitReporter: {
-    outputDir: '',
+    outputDir: 'reports/coverage/',
     suite: 'models'
     },
     coverageReporter: {
-        dir: '',
+        dir: 'reports/coverage/',
         reporters: [
         // reporters not supporting the `file` property
         { type: 'html', dir: 'reports/coverage/', subdir: 'report-html' },
