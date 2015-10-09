@@ -1,6 +1,7 @@
-define(function() {
+//define(function() {
     var constants = (function () {
-        var cambio = {
+       
+        return constants = {
             EUROS_TO_PTAS: 166.3860,
             PTAS_TO_EUROS: 0.00601012,
 
@@ -10,8 +11,12 @@ define(function() {
             GBP_TO_EUROS: 1.34860,
             EUROS_TO_GBP: 0.74133
         };
-        return cambio;
+        //return cambio;
     })();
 
-    return constants;
-});
+//    return constants;
+//});
+
+if ( typeof module !== "undefined" ) {
+  module.exports = constants;
+}

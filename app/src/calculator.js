@@ -1,14 +1,17 @@
-define(function() {
-        var operaciones = ( function() {
-            function suma(oper1, oper2){
+/*! calculator v0.0.0 - MIT license */
+'use strict';
+
+//define(function() {
+        var calculator = ( function() {
+            function addition(oper1, oper2){
                 return parseFloat(oper1 + oper2).toFixed(2);
             }
 
-            function resta(oper1, oper2){
+            function subtraction(oper1, oper2){
                 return parseFloat(oper1 - oper2).toFixed(2);
             }
 
-            function multiplicacion(oper1, oper2){
+            function multiplication(oper1, oper2){
                 return parseFloat(oper1 * oper2).toFixed(2);
             }
 
@@ -18,18 +21,25 @@ define(function() {
 
             return {
                 add: function (n1, n2){
-                    return suma(n1,n2);
+                    return addition(n1,n2);
                 },
                 sub: function (n1, n2){
-                    return resta(n1,n2);
+                    return subtraction(n1,n2);
                 },
                 mult: function (n1, n2){
-                    return multiplicacion(n1,n2);
+                    return multiplication(n1,n2);
                 },
                 div: function (n1, n2){
                     return division(n1,n2);
                 }
             };
         })();
-    return operaciones;
-});
+    //return calculator;
+//});
+/*var calculator = function () {
+  // your code goes here
+}*/
+
+if ( typeof module !== "undefined" ) {
+  module.exports = calculator;
+}

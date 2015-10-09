@@ -1,8 +1,12 @@
-define(["operaciones"], function(operaciones) {
-    var cambioDivisas = (function () {
+'use strict';
+var path = require('path');
+
+var calculator = require(path.join(__dirname, '.', './calculator.js'));
+//define(["operaciones"], function(operaciones) {
+    var cambio = (function () {
 
         function cambioDiv (oriValue, constantDest) {
-            return operaciones.mult(oriValue, constantDest);
+            return calculator.mult(oriValue, constantDest);
         }
 
         return{
@@ -12,5 +16,9 @@ define(["operaciones"], function(operaciones) {
         };
     })();
 
-    return cambioDivisas;
-});
+//    return cambio;
+//});
+
+if ( typeof module !== "undefined" ) {
+  module.exports = cambio;
+}

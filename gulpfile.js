@@ -1,63 +1,73 @@
 var gulp = require('gulp');
+var mocha = require('gulp-mocha');
+var gutil = require('gulp-util');
+var istanbul = require('gulp-istanbul');
 var jshint = require('gulp-jshint');
 var jshintXMLReporter = require('gulp-jshint-xml-file-reporter');
-var Server = require('karma').Server;
-var webserver = require('gulp-webserver');
 
-/**
- * Run test once and exit
- */
-gulp.task('test', function (done) {
-  new Server({
-    configFile: __dirname + '/karma.conf.js',
-    singleRun: true
-  }, done).start();
+
+gulp.task('pre-test', function () {
+  return gulp.src(['app/src/*.js'])
+    // Covering files
+    .pipe(istanbul())
+    // Force `require` to return covered files
+    .pipe(istanbul.hookRequire());
 });
 
-/**
- * Watch for file changes and re-run tests on each change
- */
-gulp.task('tdd', function (done) {
-  new Server({
-    configFile: __dirname + '/karma.conf.js'
-  }, done).start();
+gulp.task('test', ['pre-test'], function () {
+  return gulp.src(['spec/*.js'])
+    .pipe(mocha())
+    // Creating the reports after tests ran
+    .pipe(istanbul.writeReports())
+    // Enforce a coverage of at least 90%
+    .pipe(istanbul.enforceThresholds({ thresholds: { global: 90 } }));
 });
 
-/**
- * Run default JSHint 
- */
-gulp.task('lintDefault', function() {
-  return gulp.src('./app/src/*.js')
-	.pipe(jshint())
-	.pipe(jshint.reporter('default'));
+gulp.task('mocha', function() {
+    return gulp.src(['spec/*.js'], { read: false })
+        .pipe(mocha({ reporter: 'list' }))
+        .on('error', gutil.log);
 });
 
-/**
- * Run JSHint with stylish
- */
-gulp.task('lint', function() {
-  return gulp.src('./app/src/*.js')
-	.pipe(jshint())
-	.pipe(jshint.reporter('jshint-stylish'));
+gulp.task('watch-mocha', function() {
+    gulp.watch(['app/src/**', 'spec/**'], ['mocha']);
 });
 
-gulp.task('lintOutput', function () {
-    return gulp.src('./app/src/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter(jshintXMLReporter))
-        .on('end', jshintXMLReporter.writeFile({
-            format: 'checkstyle',
-            filePath: './jshint.xml'
-        }));
-});
+ /**
+  * Run default JSHint 
+  */
+ gulp.task('lintDefault', function() {
+   return gulp.src('./app/src/*.js')
+ 	.pipe(jshint())
+ 	.pipe(jshint.reporter('default'));
+ });
 
-gulp.task('webserver', function() {
-  gulp.src('app')
-    .pipe(webserver({
-      livereload: true,
+ /**
+  * Run JSHint with stylish
+  */
+ gulp.task('lint', function() {
+   return gulp.src('./app/src/*.js')
+ 	.pipe(jshint())
+ 	.pipe(jshint.reporter('jshint-stylish'));
+ });
+
+ gulp.task('lintOutput', function () {
+     return gulp.src('./app/src/*.js')
+         .pipe(jshint())
+         .pipe(jshint.reporter(jshintXMLReporter))
+         .on('end', jshintXMLReporter.writeFile({
+             format: 'checkstyle',
+             filePath: './jshint.xml'
+         }));
+ });
+
+// gulp.task('webserver', function() {
+//   gulp.src('app')
+//     .pipe(webserver({
+//       livereload: true,
       
-      open: true
-    }));
-});
+//       open: true
+//     }));
+// });
 
-gulp.task('default', ['webserver']);
+ gulp.task('default', ['mocha']);
