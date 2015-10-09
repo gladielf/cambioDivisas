@@ -11,6 +11,11 @@ var constants = require(path.join(__dirname, '..', 'app/src/constants.js' ));
 
 describe('calculator()', function () {
   'use strict';
+  
+  it('exists', function () {
+    expect(calculator).to.be.a('object');
+
+  });
 
   it ("suma 1+12", function(){
     expect(calculator.add(1,1)).to.equal('2.00');
